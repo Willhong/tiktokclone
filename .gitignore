@@ -1,0 +1,28 @@
+# Flutter/Dart specific
+**/build/
+**/ios/Pods/
+**/android/.gradle/
+**/android/captures/
+.dart_tool/
+.pub/
+.pub-cache/
+.idea/
+.vscode/
+.android/
+.ios/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.iml
+
+# Generated files
+*.log
+*.gz
+*.tar
+*.zip
+*.apk
+*.ipa
+*.flutter-plugins
+
+# macOS files
+.DS_Store
