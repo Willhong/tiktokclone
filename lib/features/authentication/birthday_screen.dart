@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktokclone/constants/gaps.dart';
 import 'package:tiktokclone/constants/sizes.dart';
-import 'package:tiktokclone/features/authentication/email_screen.dart';
 import 'package:tiktokclone/features/authentication/widgets/form_button.dart';
+import 'package:tiktokclone/features/onboarding/interests_screen.dart';
 
 class BirthdayScreen extends StatefulWidget {
   const BirthdayScreen({super.key});
@@ -23,10 +23,13 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
   }
 
   void _onNextTap() {
-    Navigator.of(context).push(
+    Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(
-        builder: (context) => const EmailScreen(),
+        builder: (context) => const InterestsScreen(),
       ),
+      (route) {
+        return false;
+      },
     );
   }
 
@@ -95,6 +98,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
               onTap: _onNextTap,
               child: const FormButton(
                 disabled: false,
+                text: "Next",
               ),
             ),
           ],
